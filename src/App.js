@@ -1,11 +1,16 @@
 import './App.css';
+import Header from './Header';
+import Search from './Search';
 
 function App() {
-	return <div>
-    <header className='schwifty'>
-      <h1>Get Schwifty!</h1>
-    </header>
-  </div>;
+	return (
+  <>
+  <div className='schwifty-container'>
+    <Header />
+    <Search/>
+  </div>
+  </>
+  )
 }
 
 export default App;

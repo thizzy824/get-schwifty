@@ -30,7 +30,6 @@ function Search() {
 
 	return (
 		<div>
-			
 			<form className='search-form' onSubmit={handleSubmit}>
 				<label htmlFor='searchString'>
 					{' '}
@@ -51,6 +50,9 @@ function Search() {
 					<div>
 						<img src={character.image} alt={character.name} />
 						<strong>{character.name}</strong>
+						<p>Status: {character.status}</p>
+                        <p>Species: {character.species}</p>
+                        <p>Location: {character.location.name}</p>
 					</div>
 				))}
 			</div>

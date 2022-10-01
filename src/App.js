@@ -7,6 +7,8 @@ import { useState, useEffect } from 'react';
 function App() {
 
   const [characters, setCharacters] = useState([])
+  const [searchString, setSearchString] = useState('');
+  const [lastSearch, setLastSearch] = useState('');
 
   let url = 'https://rickandmortyapi.com/api/character';
 
@@ -19,14 +21,27 @@ function App() {
   
   console.log(characters)
 
+  function handleChange(event) {
+		setSearchString(event.target.value);
+	}
+
+	function handleSubmit(event) {
+		event.preventDefault();
+	}
+
+
 
 	return (
 		<>
 			<div className='schwifty-container'>
-					<Header />
+				<Header />
 			</div>
-			<Search />
-				<Results />
+			<Search
+				handleChange={handleChange}
+				handleSubmit={handleSubmit}
+				searchString={searchString}
+			/>
+			<Results characters={characters}/>
 		</>
 	);
 }

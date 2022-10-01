@@ -52,7 +52,7 @@ function Search() {
 				{characters.map((character) => (
 					<div>
 						<img src={character.image} alt={character.name} />
-						{character.name}
+						<strong>{character.name}</strong>
 					</div>
 				))}
 			</div>

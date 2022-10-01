@@ -2,12 +2,24 @@ import './App.css';
 import Header from './Header';
 import Search from './Search';
 import Results from './Results';
-import {Routes, Route, Link, useSearchParams} from 'react-router-dom'
-import { useState } from 'react';
+import {Routes, Route, Link} from 'react-router-dom'
+import { useState, useEffect } from 'react';
 
 function App() {
 
-  const [searchParams, setSearchParams] = useSearchParams()
+  const [characters, setCharacters] = useState([])
+
+  let url = 'https://rickandmortyapi.com/api/character';
+
+  useEffect(() => {
+    fetch(url)
+			.then((res) => res.json())
+			.then((data) => setCharacters(data.results))
+			.catch((err) => console.log('Error!', err));
+	}, []);
+  
+  console.log(characters)
+
 
 	return (
 		<>
@@ -19,11 +31,11 @@ function App() {
 			<Routes>
 				<Route
 					path='/'
-					element={<Search setSearchParams={setSearchParams} />}
+					element={<Search />}
 				/>
 				<Route
 					path='/results'
-					element={<Results searchParams={searchParams} />}
+					element={<Results />}
 				/>
 			</Routes>
 		</>

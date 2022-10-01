@@ -7,3 +7,8 @@
     text-align: center;
     background:rgb(4, 189, 235)
 }
+
+.search-form {
+    display: flex;
+    justify-content: center;
+}

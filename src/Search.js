@@ -30,9 +30,7 @@ function Search() {
 
 	return (
 		<div>
-			<h2 className='search-title'>
-				Search for any character in the Rick and Morty Universe!
-			</h2>
+			
 			<form className='search-form' onSubmit={handleSubmit}>
 				<label htmlFor='searchString'>
 					{' '}

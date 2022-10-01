@@ -8,18 +8,16 @@ function App() {
 
   const [characters, setCharacters] = useState([])
   const [searchString, setSearchString] = useState('');
-  const [lastSearch, setLastSearch] = useState('');
 
-  let url = 'https://rickandmortyapi.com/api/character';
+  let url = `https://rickandmortyapi.com/api/character/?name=${searchString}`;
 
   useEffect(() => {
     fetch(url)
 			.then((res) => res.json())
 			.then((data) => setCharacters(data.results))
 			.catch((err) => console.log('Error!', err));
-	}, []);
+	}, [url]);
   
-  console.log(characters)
 
   function handleChange(event) {
 		setSearchString(event.target.value);

@@ -10,10 +10,11 @@ const  Results = ({characters}) => {
 					{characters.map((character) => (
 						<div key={character.id} className='details'>
 							<img src={character.image} alt={character.name} />
-							<strong>{character.name}</strong>
+							<strong>{character.name}
 							<p>Status: {character.status}</p>
 							<p>Species: {character.species}</p>
 							<p>Location: {character.location.name}</p>
+                            </strong>
 						</div>
 					))}
 				</div>

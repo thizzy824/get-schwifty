@@ -1,6 +1,6 @@
 const  Results = ({characters}) => {
 
-    if(!characters.length) {
+    if (!characters.length) {
         return <h2>No Characters found!</h2>
     }
 

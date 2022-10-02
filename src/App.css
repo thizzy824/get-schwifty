@@ -35,3 +35,10 @@ body {
     text-shadow: 2px 2px 2px rgb(239, 5, 5);
     color: white
 }
+
+.no-characters {
+    text-align: center;
+    font-size: 80px;
+    color: red;
+    text-shadow: 3px 3px 3px black
+}

@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Search({ handleChange, handleSubmit, searchString }) {
+function Search({ handleChange, searchString }) {
 	return (
 		<div className='search-form'>
-			<form onSubmit={handleSubmit}>
+			<form >
 				<label htmlFor='searchString'>
 					{' '}
 					<strong>Search:</strong>
@@ -17,7 +17,6 @@ function Search({ handleChange, handleSubmit, searchString }) {
 					value={searchString}
 					required
 				/>
-				<button type='submit'>Search</button>
 			</form>
 			<button>Random Characters</button>
 		</div>

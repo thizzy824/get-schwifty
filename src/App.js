@@ -4,6 +4,7 @@ import Search from './Search';
 import Results from './Results';
 import { useState, useEffect } from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
+import Episodes from './Episodes';
 
 function App() {
 	const [characters, setCharacters] = useState([]);
@@ -29,7 +30,7 @@ function App() {
 					<Header />
 				</Link>
 				<Link to='/episodes'>
-					<h3 className='center'>Episodes</h3>
+					<h2 className='center'>Episodes</h2>
 				</Link>
 			</div>
 			<Search handleChange={handleChange} searchString={searchString} />
@@ -42,6 +43,7 @@ function App() {
 					}
 				/>
 				<Route path='/' element={<Results characters={characters} />} />
+				<Route path='/episodes/' element={<Episodes />}/>
 			</Routes>
 		</>
 	);

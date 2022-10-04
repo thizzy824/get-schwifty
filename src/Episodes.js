@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 function Episodes() {
 
@@ -10,7 +10,9 @@ function Episodes() {
     useEffect(() => {
 			fetch(epUrl)
 				.then((res) => res.json())
-				.then((data) => setCharacters(data.results))
+				.then((data) => {
+                    console.log(data)
+                    setEpisodes(data)})
 				.catch((err) => console.log('Error!', err));
 		}, []);
 

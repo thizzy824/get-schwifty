@@ -14,12 +14,12 @@ function Search({ handleChange, searchString,}) {
 				</label>
 				<input
 					className='input'
+					placeholder='Enter Name'
 					type='text'
 					id='searchString'
 					name='searchString'
 					onChange={handleChange}
 					value={searchString}
-					required
 					/>
 			</form>
 		</div>

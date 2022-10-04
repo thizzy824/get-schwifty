@@ -1,7 +1,7 @@
 const  Results = ({characters}) => {
 
     if (!characters) {
-        return <h2 className='no-characters'>No Characters Found! Jeez Morty!</h2>
+        return <h2 className='not-found'>No Characters Found! Jeez Morty!</h2>
     }
 
     return (

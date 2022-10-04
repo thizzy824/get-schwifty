@@ -1,6 +1,8 @@
 
 const EpisodeResults = ({episodes}) => {
 
+// console.log(episodes)
+
     if (!episodes) {
         return <h2 className='not-found'>No Episode Found</h2>
     }
@@ -8,15 +10,15 @@ const EpisodeResults = ({episodes}) => {
     return (
         <div>
             <div className='results'>
-                {episodes.map((episode) => {
+                {episodes.map((episode) => (
                     <div key={episode.id} className='details' >
                         <strong>
-                            <p>Episode # : {episode.id}</p>
+                            <p>Episode # <strong>{episode.id}</strong></p>
                             <p>Name: {episode.name}</p>
                             <p>Air-Date: {episode.air_date}</p>
                         </strong>
                     </div>
-                })}
+                ))}
             </div>
         </div>
     );

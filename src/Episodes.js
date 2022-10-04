@@ -7,7 +7,7 @@ import EpisodeResults from './EpisodeResults';
 function Episodes() {
     
     const [episodes, setEpisodes] = useState([]);
-    const [searchEpisodes, setSearchEpisodes] = useState('')
+    const [searchEpisodes, setSearchEpisodes] = useState()
     
 	const epUrl = `https://rickandmortyapi.com/api/episode/?id=${searchEpisodes}`;
 
@@ -15,7 +15,6 @@ function Episodes() {
 		fetch(epUrl)
 			.then((res) => res.json())
 			.then((data) => {
-                console.log(data)
 				setEpisodes(data.results);
 			})
 			.catch((err) => console.log('Error!', err));

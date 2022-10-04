@@ -1,7 +1,11 @@
 import React from 'react';
 
-function Search({ handleChange, searchString }) {
+
+function Search({ handleChange, searchString,}) {
+
 	return (
+		<>
+		<h3 className='center'>Search for any character</h3>
 		<div className='search-form'>
 			<form >
 				<label htmlFor='searchString'>
@@ -16,10 +20,10 @@ function Search({ handleChange, searchString }) {
 					onChange={handleChange}
 					value={searchString}
 					required
-				/>
+					/>
 			</form>
-			<button>Random Characters</button>
 		</div>
+					</>
 	);
 }
 

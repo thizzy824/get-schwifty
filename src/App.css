@@ -42,3 +42,7 @@ body {
     color: red;
     text-shadow: 3px 3px 3px black
 }
+
+.center {
+    text-align: center;
+}

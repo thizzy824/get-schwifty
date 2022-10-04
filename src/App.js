@@ -3,6 +3,7 @@ import Header from './Header';
 import Search from './Search';
 import Results from './Results';
 import { useState, useEffect } from 'react';
+import { Route, Routes, Link } from 'react-router-dom';
 
 function App() {
 	const [characters, setCharacters] = useState([]);
@@ -24,10 +25,24 @@ function App() {
 	return (
 		<>
 			<div className='schwifty-container'>
-				<Header />
+				<Link to='/'>
+					<Header />
+				</Link>
+				<Link to='/episodes'>
+					<h3 className='center'>Episodes</h3>
+				</Link>
 			</div>
 			<Search handleChange={handleChange} searchString={searchString} />
 			<Results characters={characters} />
+			<Routes>
+				<Route
+					path='/'
+					element={
+						<Search handleChange={handleChange} searchString={searchString} />
+					}
+				/>
+				<Route path='/' element={<Results characters={characters} />} />
+			</Routes>
 		</>
 	);
 }

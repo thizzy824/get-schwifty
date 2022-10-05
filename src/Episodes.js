@@ -1,34 +1,33 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 import SearchEpisodes from './SearchEpisodes';
 import EpisodeResults from './EpisodeResults';
 
 
+
 function Episodes() {
-    
-    const [episodes, setEpisodes] = useState([]);
-    const [searchEpisodes, setSearchEpisodes] = useState()
-    
-	const epUrl = `https://rickandmortyapi.com/api/episode/?id=${searchEpisodes}`;
+	const [episodes, setEpisodes] = useState([]);
+	const [searchEpisodes, setSearchEpisodes] = useState('');
+
+	let episodeUrl = `https://rickandmortyapi.com/api/episode/?id=${searchEpisodes}`;
 
 	useEffect(() => {
-		fetch(epUrl)
+		fetch(episodeUrl)
 			.then((res) => res.json())
-			.then((data) => {
-				setEpisodes(data.results);
-			})
+			.then((data) => setEpisodes(data.results))
 			.catch((err) => console.log('Error!', err));
-	}, [epUrl]);
+	}, [episodeUrl]);
 
-
-    function changeEpisode(event) {
-        setSearchEpisodes(event.target.value)
-    }
+	function changeEpisode(event) {
+		setSearchEpisodes(event.target.value);
+	}
 
 	return (
 		<div>
-			<SearchEpisodes changeEpisode={changeEpisode} searchEpisodes={searchEpisodes} />
-            <EpisodeResults episodes={episodes} />
+			<SearchEpisodes
+				changeEpisode={changeEpisode}
+				searchEpisodes={searchEpisodes}
+			/>
+			<EpisodeResults episodes={episodes} />
 		</div>
 	);
 }

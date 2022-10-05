@@ -1,5 +1,5 @@
 body {
-    background: grey;
+    background: black;
 }
 
 
@@ -7,7 +7,7 @@ body {
     color:white;
     text-align: center;
     background:rgb(5, 5, 216);
-    text-shadow: 2px 2px 2px rgb(240, 1, 1)
+    text-shadow: 2px 2px 2px rgb(240, 1, 1);
 }
 
 .search-form {

@@ -4,8 +4,6 @@ import { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom'
 
 
-import React from 'react';
-
 function Characters() {
 	const [characters, setCharacters] = useState([]);
 	const [searchString, setSearchString] = useState('');
@@ -20,6 +18,7 @@ function Characters() {
 	}, [url]);
 
 	function handleChange(event) {
+		event.preventDefault()
 		setSearchString(event.target.value);
 	}
 

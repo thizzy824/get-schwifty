@@ -12,7 +12,7 @@ function SearchEpisodes({ searchEpisodes, changeEpisode }) {
 					</label>
 					<input
 						className='input'
-						placeholder='Enter Episode #'
+						placeholder='Enter Episode Name'
 						type='text'
 						id='searchEpisodes'
 						name='searchEpisodes'

@@ -2,13 +2,11 @@ import { useState, useEffect } from 'react';
 import SearchEpisodes from './SearchEpisodes';
 import EpisodeResults from './EpisodeResults';
 
-
-
 function Episodes() {
 	const [episodes, setEpisodes] = useState([]);
 	const [searchEpisodes, setSearchEpisodes] = useState('');
 
-	let episodeUrl = `https://rickandmortyapi.com/api/episode/?id=${searchEpisodes}`;
+	let episodeUrl = `https://rickandmortyapi.com/api/episode/?name=${searchEpisodes}`;
 
 	useEffect(() => {
 		fetch(episodeUrl)

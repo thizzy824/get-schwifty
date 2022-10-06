@@ -2,11 +2,11 @@
 
 An interactive character and episode data base for the popular Rick and Morty series. Fans of the series will be able to search by name for any character that has made an appearance in the series along with any episode. The motivation for this project was the release of the new season of Rick and Morty since this is an on-going series.
 
-###### Deployed Project
+### Deployed Project
 
 [https://get-schwifty.netlify.app/]
 
-###### Get Schwifty Image
+### Get Schwifty Image
 
 ![Get Schwifty](public/Schwifty.png)
 

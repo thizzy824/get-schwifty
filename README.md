@@ -8,7 +8,7 @@ An interactive character and episode data base for the popular Rick and Morty se
 
 ###### Get Schwifty Image
 
-![Get Schwifty](public/get-schwifty.png)
+![Get Schwifty](public/Schwifty.png)
 
 ## Technologies Used
 
